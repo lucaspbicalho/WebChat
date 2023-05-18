@@ -213,6 +213,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LetsChat.cs" />
+    <Compile Include="Migrations\202305180127157_ini.cs" />
+    <Compile Include="Migrations\202305180127157_ini.designer.cs">
+      <DependentUpon>202305180127157_ini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -221,10 +226,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-WebChat-20230517101415.mdf" />
-    <Content Include="App_Data\aspnet-WebChat-20230517101415_log.ldf">
-      <DependentUpon>aspnet-WebChat-20230517101415.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\AdminLTE\adminlte.css" />
     <Content Include="Content\AdminLTE\adminlte.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -328,7 +329,11 @@
     <Content Include="Views\Shared\_LayoutWebChat.cshtml" />
     <Content Include="Views\WebChat\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202305180127157_ini.resx">
+      <DependentUpon>202305180127157_ini.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -341,6 +346,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
