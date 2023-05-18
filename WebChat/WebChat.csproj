@@ -221,12 +221,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="App_Data\aspnet-WebChat-20230517101415.mdf" />
+    <Content Include="App_Data\aspnet-WebChat-20230517101415_log.ldf">
+      <DependentUpon>aspnet-WebChat-20230517101415.mdf</DependentUpon>
     </Content>
     <Content Include="Content\AdminLTE\adminlte.css" />
     <Content Include="Content\AdminLTE\adminlte.min.css" />
